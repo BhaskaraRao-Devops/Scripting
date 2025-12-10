@@ -44,3 +44,9 @@ NAME="BHASKAR"
 TOTAL=$(($NUM1+$NUM2+$NAME))
 echo "Total value is $TOTAL"
 #echo "Total value is ${TOTAL}"
+
+LEADERS=("Modi" "Putin" "Trudo" "Trump")
+
+echo "All leaders: ${LEADERS[@]}"
+echo "First Leader: ${LEADERS[0]}"
+echo "First Leader: ${LEADERS[10]}"
