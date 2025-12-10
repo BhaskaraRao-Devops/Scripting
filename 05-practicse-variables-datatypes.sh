@@ -17,3 +17,13 @@ read -s PIN_NUMBER # here PIN_NUMBER is variable
 echo "PIN entered is: $PIN_NUMBER"
 
 echo "Course name is: $COURSE"
+
+START_TIME=$(date +%s)
+
+sleep 10
+
+END_TIME=$(date +%s)
+
+TOTAL_TIME=$(($END_TIME-$START_TIME))
+
+echo "Script executed in: $TOTAL_TIME Seconds"
