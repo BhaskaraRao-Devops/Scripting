@@ -40,6 +40,7 @@ echo "PID of the last command in background is: $!"
 
 NUM1=100
 NUM2=200
-TOTAL=$(($NUM1+$NUM2))
+NAME="BHASKAR"
+TOTAL=$(($NUM1+$NUM2+$NAME))
 echo "Total value is $TOTAL"
-echo "Total value is ${TOTAL}"
+#echo "Total value is ${TOTAL}"
