@@ -2,5 +2,5 @@
 
 echo " Reading inputs from keyboard"
 
-read s pin
+read -s pin
 echo "pin is $pin"
