@@ -1,18 +1,26 @@
 #!/bin/bash
 
-USERID=$(id -u) 
+USERID=$(id -u)
 
-if [ $USERID -ne 0 ] ; then
-    echo "ERROR:: Run with root preiliages"
-    exit 1
-else
-    echo "Installation is done"
+if [ $USERID -ne 0 ]; then
+    echo "ERROR:: Please run this script with root privelege"
+    exit 1 # failure is other than 0
 fi
 
-dnf install java
+VALIDATE(){ # functions receive inputs through args just like shell script args
+    if [ $1 -ne 0 ]; then
+        echo "ERROR:: Installing $2 is failure"
+        exit 1
+    else
+        echo "Installing $2 is SUCCESS"
+    fi
+}
 
-if [ $? -ne 0] ;then
-    echo "Applications is not installed"
-else
-    echo "Applications is installed"
-fi
+dnf install mysql -y
+VALIDATE $? "MySQL"
+
+dnf install nginx -y
+VALIDATE $? "Nginx"
+
+dnf install python3 -y
+VALIDATE $? "python3"
