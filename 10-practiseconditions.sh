@@ -4,6 +4,7 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ] ; then
     echo "ERROR:: Run with root preiliages"
+    exit 1
 else
     echo "Installation is done"
 fi
