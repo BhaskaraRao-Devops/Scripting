@@ -7,3 +7,4 @@ elif [ $NUM -eq 10 ] ; then
     echo "NUMBER $NUM is equal to 10"
 else
     echo "NUMBER $NUM is greater than 10"
+fi
